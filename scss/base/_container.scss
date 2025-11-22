@@ -1,0 +1,14 @@
+.layout__container{
+  margin-left: 18vw;
+  margin-right: 18vw;
+}
+@media (max-width: $mobile)
+{
+  .layout__container{
+    margin-left: 10vw;
+    margin-right: 10vw;
+    @include flexbase();
+    flex-direction: column;
+    align-items: center;
+  }
+  }

@@ -1,0 +1,112 @@
+.button-subscribe{
+  a{
+      color: $white;
+    }
+  &--main{
+    transition: 0.4s;
+    transform: scale(1);
+    height: 3.848vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $gradient-primary;
+    color: $white;
+    border-radius: 0.9vw;
+    width: auto;
+    width: 16.64vw;
+    text-align: center;
+    
+    a{
+      transition: 0.4s;
+      transform: scale(1);
+      color: $white;
+      font-family: "Inter", sans-serif;
+    }
+    
+    &:hover{
+      @include hoverbase();
+      background: #34BCA6;
+      background:$gradient-secondary;
+      
+      a{
+        color: $white;
+      }
+    }
+  }
+  
+  &--secondary{
+    transition: 0.4s;
+    transform: scale(1);
+    @include flexbase();
+    justify-content: center;
+    position: relative;
+    width: 16.666vw;
+    height: 4vw;
+    border: solid rgb(251, 89, 2) 0.052vw;
+    border-radius: 0.6vw; 
+    background-color: $white;
+    margin-top: 2.4vw;
+    
+    a{
+      color: #000000;
+    }
+    
+    &:hover{
+      transition: 0.2s;
+      background: #34BCA6;
+      background:$gradient-secondary;
+      transform: scale(1.05);
+      
+      a{
+        color: $white;
+      }
+    }
+  }
+  
+  &--third{
+    transition: 0.4s;
+    transform: scale(1);
+    height: 2.7vw;
+    @include flexbase();
+    justify-content: center;
+    background: $white;
+    color: #000000;
+    border-radius: 0.8vw;
+    width: 12.2vw;
+    text-align: center;
+    
+    a{
+      color: #000000;
+    }
+    
+    &:hover{
+      @include hoverbase();
+      background: $dark-gray;
+      color: $white;
+      
+      a{
+        color: $white;
+      }
+    }
+  }
+  
+  &--tariff{
+    transition: 0.4s;
+    transform: scale(1);
+    height: 4vw;
+    @include flexbase();
+    justify-content: center;
+    background: #CC6819;
+    color: #000000;
+    border-radius: 0.8vw;
+    width: 16.5vw;
+    text-align: center;
+    a{
+      color: $white;
+    }
+    
+    &:hover{
+      @include hoverbase();
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.tariffs{
+  padding-top: 4vw;
+  padding-bottom: 5vw;
+  
+  &__cards{
+    display: flex;
+    flex-direction: row;
+    height: 46vw;
+    justify-content: space-between;
+  }
+  
+  &__card{
+    transition: 0.4s;
+    transform: scale(1);
+    border: #CC6819 0.052vw solid;
+    border-radius: 1vw;
+    @include flexbase();
+    justify-content: center;
+    flex-direction: column;
+    width: 20vw;
+    height: 44.5vw;
+    color: #000000;
+    
+    h3{
+      font-size: 2.2vw;
+      text-align: center;
+      margin: 0;
+      font-weight: 400;
+    }
+    
+    ul{
+      padding: 0%;
+      padding-left: 1vw;
+    }
+    
+    li{
+      margin-bottom: 1.5vw;
+      width: 18vw;
+      padding: 0%;
+    }
+    
+    .tariffs__discount{
+      padding:  2vw 1.7vw 2vw 1.7vw; 
+      border-radius: 100%; 
+      background-color: #CC6819; 
+      color: white;
+      position: absolute; 
+      top: -3vw; 
+      right: -2vw;
+    }
+    
+    .tariffs__old-price{
+      font-size: smaller; 
+      text-decoration: line-through; 
+      position: absolute; 
+      bottom: 37vw;
+    }
+    
+    &:hover{
+      @include hoverbase();
+      background:$gradient-primary; 
+      color: white;
+      box-shadow: 0 0 1.5vw 0.5vw rgba(204, 104, 25, 0.5);
+      
+      .tariffs__discount{
+        background: $dark-gray;
+      }
+      
+      .button-subscribe--tariff{
+        background: $white;
+        
+        a{
+          color: #000000;
+        }
+      }
+    }
+    
+    &:nth-child(1){
+      ul{
+        li:nth-child(n + 5){
+          color: #a0a0a0;
+          user-select: none;
+        } 
+      }
+    }
+    
+    &:nth-child(3){
+      ul{
+        li:nth-child(n + 7){
+          color: #a0a0a0;
+          user-select: none;
+        } 
+      }
+    }
+  }
+}
+@media (max-width: $mobile){
+    .tariffs{
+    h2{
+      font-size: 500%;
+      padding-bottom: 5vw;
+    }
+    
+    .tariffs__cards{
+      flex-direction: column;
+      height:auto;
+      gap: 6vw;
+      
+      .tariffs__card{
+        border-radius: 3vw;
+        width: 60vw;
+        height: 135vw;
+        justify-content: space-around;
+        
+        h3{
+          font-size: 800%;
+        }
+        
+        li{
+          margin-bottom: 1.5vw;
+          width: 45vw;
+          font-size: 300%;
+        }
+        
+        .button-subscribe--tariff{
+          align-self: center;
+          width: 45VW;
+          height: 15VW;
+          font-size: 300%;
+          font-weight: 600;
+          border-radius: 3VW;
+          
+          a{
+            color: $white;
+          }
+          &:hover{
+            a{
+              color: $black;
+          }
+        }
+        }
+        
+        .tariffs__discount{
+          transform: scale(2);
+        }
+        
+        .tariffs__old-price{
+          font-size: 500%;
+          bottom: 97vw;
+        }
+        
+        &.in-viewport {
+          transition: 0.4s;
+          transform: scale(1.1);
+          background:$gradient-primary; 
+          color: white;
+          box-shadow: 0 0 1.5vw 0.5vw rgba(204, 104, 25, 0.5);
+        }
+      }
+    }
+  }  
+}

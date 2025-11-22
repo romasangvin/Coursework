@@ -1,0 +1,87 @@
+.recipes{
+  padding-top: 4vw;
+  
+  &__blocks{
+    width: 64vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+    
+    .recipes__block{
+      &--breakfast, &--lunch, &--dinner, &--smoothies{
+        border-radius: 1.5vw;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1vw;
+        align-items: start;
+        background-repeat: no-repeat;
+        background-position: center center;
+        
+        p{
+          color: white;
+          font-size: 2.2vw;
+          margin: 0;
+          margin-left: 1vw;
+        }
+        
+        a{
+          margin-right: 1vw; 
+        }
+      }
+      
+      &--breakfast{
+        background: url(../photos/32b6a644c49812ab3bbe7d7bf7691e114fe5400d.png);
+        background-size: 36.4vw;
+        width: 36.4vw;
+        height: 25vw;
+      }
+      
+      &--lunch{
+        background: url(../photos/2d6309e22161a5512ebe37968867fbd1f6fd6f33.png);
+        background-size: 25.7vw;
+        width: 25.7vw;
+        height: 24vw;
+      }
+      
+      &--dinner{
+        background: url(../photos/63019535b5fd4b82e3467aa22b0fd6ac416cac61.png);
+        background-size: 25.7vw;
+        width: 25.7vw;
+        height: 24vw;
+      }
+      
+      &--smoothies{
+        background: url(../photos/4cd4ef3984d9f21302f81a6a26e8c03c76541918.png);
+        background-size: 36.4vw;
+        width: 36.4vw;
+        height: 25vw; 
+      }
+    }
+  }
+}
+@media (max-width: $mobile){
+   .recipes{
+    h2{
+      font-size: 500%;
+    }
+    
+    .recipes__block{
+      &--breakfast, &--lunch, &--dinner, &--smoothies{
+        width: 64vw;
+        height: 64vw;
+        background-size: 64vw;
+        align-self: center;
+        
+        p{
+          font-size: 500%;
+        }
+        
+        [alt=arrow]{
+          width: 7vw;
+        }
+      }
+    }
+  }
+    
+}
