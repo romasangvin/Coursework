@@ -1,0 +1,51 @@
+ .error-container {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            @include flexbase();
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            width: 100vw;
+            background: #CC6819;
+            height: 100vh;
+            position: absolute;
+            left: 0;
+            top: 0;
+            
+        .error-code {
+            font-size: 18vw;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .error-message {
+            font-size: 4vw;
+            font-weight: 700;
+            color: white;
+        }
+        .nav-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5vw 5vw;
+            font-size: 3vw;
+            font-weight: 600;
+            text-decoration: none;
+              transition: 0.4s;
+            transform: scale(1);
+            border-radius: 0.6vw; 
+            background-color: $white;
+            margin-top: 2.4vw;
+            color: black;
+
+        }
+        .nav-button:hover {
+        transition: 0.2s;
+       background: #34BCA6;
+        background:$gradient-secondary;
+       transform: scale(1.05);
+       color: $white;
+        }
+        }
