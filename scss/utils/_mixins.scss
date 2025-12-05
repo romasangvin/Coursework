@@ -1,8 +1,0 @@
-@mixin flexbase(){
-     display: flex;
-     align-items: center;
-}
-  @mixin hoverbase(){
-  transition: 0.4s;
-  transform: scale(1.1);
-  }
